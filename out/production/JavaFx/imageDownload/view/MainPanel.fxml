@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="263.0" prefWidth="380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imageDownload.controller.Controller">
+   <children>
+      <MenuBar cacheHint="SCALE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+                  <CheckMenuItem fx:id="deleteFile" mnemonicParsing="false" selected="true" text="Delete File" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#showMessegeAboutMe" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="34.0" layoutY="58.0" text="Website" />
+      <TextField fx:id="userGiveWebsiteLink" layoutX="101.0" layoutY="53.0" promptText="http://example.com" />
+      <Button layoutX="263.0" layoutY="53.0" mnemonicParsing="false" onAction="#buttonClickDownloadImage" prefHeight="26.0" prefWidth="83.0" text="Download" />
+      <Slider fx:id="imagePixelWidth" layoutX="135.0" layoutY="176.0" max="500.0" snapToTicks="true" />
+      <Slider fx:id="imagePixelHeight" layoutX="135.0" layoutY="206.0" max="500.0" snapToTicks="true" />
+      <Label layoutX="32.0" layoutY="176.0" text="Image width" />
+      <Label layoutX="32.0" layoutY="206.0" text="Image height" />
+      <TextField fx:id="giveWidth" layoutX="291.0" layoutY="162.0" prefHeight="29.0" prefWidth="55.0" text="0" />
+      <TextField fx:id="giveHeight" layoutX="291.0" layoutY="209.0" prefHeight="26.0" prefWidth="55.0" text="0" />
+      <ProgressIndicator fx:id="progressBar" layoutX="173.0" layoutY="109.0" progress="0.0" visible="false" />
+   </children>
+</AnchorPane>
